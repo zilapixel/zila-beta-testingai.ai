@@ -1,120 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZILA AI - Advanced Multilingual AI Assistant</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon_atoms.ico" type="image/x-icon">
+    <title>ZILA-AI — AI-Powered Web3 Intelligence</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-    <div class="container">
-        <header class="header">
-            <div class="logo-container">
-                <img src="public/images/zila.png" alt="ZILA AI Logo" class="logo">
-                <h1 class="brand-name">ZILA AI</h1>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <img src="https://mgx-backend-cdn.metadl.com/generate/images/918632/2026-02-02/57b54aba-d4bb-4523-b1c0-3b6c9970adc8.png" alt="ZILA-AI Logo" class="logo-img">
+                <span class="logo-text">ZILA-AI</span>
             </div>
-            <p class="tagline">Advanced Multilingual AI Assistant</p>
-        </header>
+            <nav class="nav">
+                <button class="nav-btn" id="loginBtn">Login</button>
+                <button class="nav-btn primary" id="signupBtn">Sign Up</button>
+            </nav>
+        </div>
+    </header>
 
-        <main class="main-content">
-            <div class="hero-section">
-                <img src="public/images/mate.png" alt="AI Brain" class="hero-image">
-                <div class="hero-overlay">
-                    <h2 class="hero-title">Welcome to the Future of AI</h2>
-                    <p class="hero-subtitle">Intelligent • Multilingual • Decentralized</p>
-                </div>
-            </div>
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="hero-section">
+            <h1 class="hero-title">ZILA-AI</h1>
+            <p class="hero-description">
+                ZILA-AI is an AI-powered Web3 intelligence platform that combines artificial
+                intelligence, blockchain technology, and decentralized innovation.
+                It allows users to ask questions, explore knowledge, and interact with AI
+                in a simple, secure, and intelligent way.
+            </p>
+            <button class="continue-btn" id="continueBtn">Continue</button>
+        </div>
+    </main>
 
-            <div class="chat-container">
-                <div class="chat-header">
-                    <img src="public/images/zila-ai.png" alt="AI Assistant" class="chat-icon">
-                    <div class="chat-header-text">
-                        <h3>ZILA Assistant</h3>
-                        <span class="status-indicator">● Online</span>
-                    </div>
-                </div>
-
-                <div class="chat-messages" id="chatMessages">
-                    <div class="message ai-message">
-                        <div class="message-avatar">AI</div>
-                        <div class="message-content">
-                            <p>Hello! I'm ZILA AI, your advanced multilingual assistant. I can help you with questions in any language. Ask me anything!</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="chat-input-container">
-                    <input 
-                        type="text" 
-                        id="userInput" 
-                        class="chat-input" 
-                        placeholder="Type your message in any language..."
-                        autocomplete="off"
-                    >
-                    <button id="sendButton" class="send-button">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-
-            <div class="features-section">
-                <h2 class="section-title">Key Features</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <div class="feature-icon">🌍</div>
-                        <h3>Multilingual Support</h3>
-                        <p>Communicate in any language with automatic detection and response</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🧠</div>
-                        <h3>Advanced AI</h3>
-                        <p>Powered by cutting-edge AI technology for accurate answers</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">🔗</div>
-                        <h3>Blockchain Integration</h3>
-                        <p>Built on Web3 principles for transparency and security</p>
-                    </div>
-                    <div class="feature-card">
-                        <div class="feature-icon">⚡</div>
-                        <h3>Real-time Responses</h3>
-                        <p>Get instant, intelligent answers to your questions</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="token-section">
-                <img src="public/images/blockchain-zila.png" alt="Blockchain Network" class="token-bg">
-                <div class="token-content">
-                    <h2 class="section-title">About ZILA Token</h2>
-                    <p class="token-description">
-                        ZILA is a next-generation blockchain token designed to integrate AI, Web3, and decentralized finance. 
-                        Learn more about our vision for a transparent, intelligent, and community-driven digital ecosystem.
-                    </p>
-                    <a href="https://zilaa10.github.io/zila-website.ai/" target="_blank" class="cta-button">
-                        Visit Official Website
-                    </a>
-                </div>
-            </div>
-        </main>
-
-        <footer class="footer">
-            <p>&copy; 2024 ZILA AI. Building the future of intelligent blockchain solutions.</p>
-            <div class="footer-links">
-                <a href="https://zilaa10.github.io/zila-website.ai/" target="_blank">Official Website</a>
-                <span>•</span>
-                <a href="https://zilaa10.github.io/TOKENOMICS-ZILA.ai/" onclick="return false;">tokenomics</a>
-                <span>•</span>
-                <a href="#" onclick="return false;">Terms of Service</a>
-            </div>
-        </footer>
+    <!-- Auth Modal -->
+    <div class="modal" id="authModal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2 class="modal-title" id="modalTitle">Login</h2>
+            <form class="auth-form" id="authForm">
+                <input type="email" class="auth-input" id="email" placeholder="Email" required>
+                <input type="password" class="auth-input" id="password" placeholder="Password" required>
+                <button type="submit" class="auth-submit">Continue</button>
+            </form>
+            <p class="auth-toggle">
+                <span id="toggleText">Don't have an account?</span>
+                <a href="#" id="toggleAuth">Sign Up</a>
+            </p>
+        </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="./auth.js"></script>
+    <script src="./script.js"></script>
 </body>
+
 </html>
