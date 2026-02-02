@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://public-frontend-cos.metadl.com/mgx/img/favicon_atoms.ico" type="image/x-icon">
+    <title>ZILA-AI Chat</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./chat.css">
+</head>
+
+<body class="chat-body">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <button class="new-chat-btn" id="newChatBtn">
+                <img src="https://mgx-backend-cdn.metadl.com/generate/images/918632/2026-02-02/e85dc335-a48f-405b-85d3-3212a8b24b17.png" alt="New Chat" class="icon-small">
+                <span>New Chat</span>
+            </button>
+        </div>
+        <div class="chat-history" id="chatHistory">
+            <!-- Chat history will be populated here -->
+        </div>
+        <div class="sidebar-footer">
+            <button class="logout-btn" id="logoutBtn">Logout</button>
+        </div>
+    </aside>
+
+    <!-- Main Chat Area -->
+    <main class="chat-main">
+        <!-- Header with Menu -->
+        <header class="chat-header">
+            <button class="menu-btn" id="menuBtn">
+                <img src="https://mgx-backend-cdn.metadl.com/generate/images/918632/2026-02-02/6d35b9ce-b85f-4328-a99b-7472acfda438.png" alt="Menu" class="icon-menu">
+            </button>
+            <div class="chat-title">ZILA-AI</div>
+        </header>
+
+        <!-- Messages Container -->
+        <div class="messages-container" id="messagesContainer">
+            <div class="welcome-message">
+                <img src="https://mgx-backend-cdn.metadl.com/generate/images/918632/2026-02-02/57b54aba-d4bb-4523-b1c0-3b6c9970adc8.png" alt="ZILA-AI" class="welcome-logo">
+                <h2>How can I help you today?</h2>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="input-container">
+            <div class="input-wrapper">
+                <textarea 
+                    class="message-input" 
+                    id="messageInput" 
+                    placeholder="Ask ZILA-AI anything…" 
+                    rows="1"
+                ></textarea>
+                <button class="send-btn" id="sendBtn">
+                    <img src="https://mgx-backend-cdn.metadl.com/generate/images/918632/2026-02-02/5c054b6b-6cc4-46aa-9d96-f5fa57be8d0f.png" alt="Send" class="icon-send">
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <script src="./auth.js"></script>
+    <script src="./chat.js"></script>
+</body>
+
+</html>
