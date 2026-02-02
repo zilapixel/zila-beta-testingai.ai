@@ -1,45 +1,87 @@
-# ZILA AI - Multilingual AI Assistant
+# ZILA-AI Website - Development Plan
 
 ## Design Guidelines
 
 ### Design References
-- **Style**: Futuristic AI Interface + Dark Mode + Blockchain Aesthetic
-- **Inspiration**: Modern AI chatbots, crypto platforms with sleek, tech-forward design
-
-### Color Palette
-- Primary: #0A0A14 (Deep Space Black - background)
-- Secondary: #1A1A2E (Dark Navy - cards/sections)
-- Accent: #00D9FF (Cyber Blue - highlights, buttons)
-- Secondary Accent: #9D4EDD (Purple - gradients, accents)
-- Text: #FFFFFF (White), #B8B8D1 (Light Gray - secondary)
-- Success: #00FF88 (Neon Green)
+- **ChatGPT Interface**: Clean, minimalist chat interface with sidebar
+- **Style**: Dark Mode + Minimalist + Professional
+- **Color Palette**:
+  - Background: #000000 (Pure Black) / #0A0A0A (Very Dark Gray)
+  - Secondary: #1A1A1A (Sidebar/Cards)
+  - Text: #FFFFFF (Pure White only)
+  - Borders: #2A2A2A (Subtle borders)
+  - Input: #2F2F2F (Input field background)
 
 ### Typography
-- Heading1: Inter font-weight 700 (42px)
-- Heading2: Inter font-weight 600 (32px)
-- Body: Inter font-weight 400 (16px)
-- Code/Technical: Fira Code font-weight 400 (14px)
+- Font Family: Inter or System UI
+- All text: White (#FFFFFF) only
+- No colored text, no gradients
+- Clean, readable spacing
 
 ### Key Component Styles
-- **Chat Interface**: Dark card with gradient border, rounded corners
-- **Buttons**: Gradient background (cyan to purple), white text, hover glow effect
-- **Input**: Dark with cyan border, focus glow
-- **Messages**: User messages (right, cyan accent), AI messages (left, purple accent)
+- **Buttons**: Minimal outline style, white border, white text
+- **Sidebar**: Dark background, collapsible, chat history list
+- **Chat Messages**: Simple white text, no bubbles, no avatars
+- **Input Field**: Fixed bottom, ChatGPT-style with send icon
 
 ### Images to Generate
-1. **hero-ai-brain.jpg** - Futuristic AI brain with neural network connections, holographic style (Style: 3d, tech aesthetic)
-2. **blockchain-network.jpg** - Abstract blockchain network visualization with glowing nodes (Style: 3d, dark background)
-3. **zila-logo.png** - Modern AI logo with "ZILA" text, geometric design (Style: minimalist, transparent background)
-4. **ai-assistant-icon.png** - Futuristic AI assistant icon, holographic effect (Style: 3d, glowing)
+1. **logo-zila-ai.png** - ZILA-AI logo, minimalist AI/Web3 theme, white on transparent (Style: vector-style, minimalist, tech-focused)
+2. **icon-menu.svg** - Hamburger menu icon, three horizontal lines, white (Style: vector-style, simple)
+3. **icon-send.svg** - Send message icon, paper plane or arrow, white (Style: vector-style, minimalist)
+4. **icon-new-chat.svg** - New chat icon, plus sign or pencil, white (Style: vector-style, simple)
 
 ---
 
 ## Development Tasks
 
-1. **Setup & Structure** - Create HTML structure with semantic elements
-2. **Generate Images** - Create all 4 images using ImageCreator
-3. **HTML** - Build chat interface, header, footer with ZILA branding
-4. **CSS** - Implement futuristic dark theme with gradients and animations
-5. **JavaScript** - Build chat logic with ZILA token detection and multilingual support
-6. **Responsive Design** - Ensure mobile-friendly layout
-7. **Final Polish** - Add animations, transitions, and accessibility features
+### 1. Project Structure Setup
+- Initialize HTML structure
+- Create CSS files for styling
+- Create JavaScript files for functionality
+
+### 2. Generate All Images
+- Use ImageCreator.generate_images to create all 4 images following design guidelines
+
+### 3. Page 1: Landing Page (index.html)
+- Header with ZILA-AI logo and Login/Sign Up buttons
+- Centered hero section with title and description
+- "Continue" button to navigate to chat interface
+- Dark mode styling with white text only
+
+### 4. Page 2: Chat Interface (chat.html)
+- ChatGPT-style layout with sidebar
+- Hamburger menu icon (top left)
+- Collapsible sidebar with chat history
+- Main chat area with message display
+- Fixed bottom input field with send button
+- New chat functionality
+
+### 5. Authentication System (auth.js)
+- Login/Sign Up modal or page
+- Session management with localStorage
+- Redirect logic for protected chat page
+
+### 6. Chat Functionality (chat.js)
+- Message sending and receiving
+- Chat history storage (localStorage)
+- Sidebar chat list management
+- Auto-save conversations
+- Multilingual AI response simulation
+
+### 7. Multilingual Support
+- Automatic language detection from user input
+- AI responses in the same language as user input
+- Support for all major languages (English, Indonesian, Japanese, Arabic, Spanish, French, etc.)
+
+### 8. Styling & Responsiveness (style.css, chat.css)
+- Dark mode theme (black background, white text)
+- ChatGPT-like spacing and proportions
+- Mobile responsive design
+- Smooth transitions and animations
+
+### 9. Testing & Final Check
+- Cross-browser testing
+- Mobile responsiveness
+- Chat functionality
+- Language switching
+- Lint check and build
