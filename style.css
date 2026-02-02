@@ -1,14 +1,285 @@
-body {
-    font-family: Arial, sans-serif;
+/* Global Styles */
+* {
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.container {
-    max-width: 1200px;
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+    background-color: #000000;
+    color: #FFFFFF;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0A0A0A;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2A2A2A;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3A3A3A;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #2A2A2A #0A0A0A;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #000000;
+    border-bottom: 1px solid #2A2A2A;
+    z-index: 100;
+    padding: 1rem 2rem;
+}
+
+.header-content {
+    max-width: 1400px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-h1 {
-    color: #333;
-} 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.logo-img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #FFFFFF;
+}
+
+.nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-btn {
+    background: transparent;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    padding: 0.5rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.nav-btn:hover {
+    background-color: #1A1A1A;
+}
+
+.nav-btn.primary {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.nav-btn.primary:hover {
+    background-color: #E0E0E0;
+}
+
+/* Main Content */
+.main-content {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    margin-top: 60px;
+}
+
+.hero-section {
+    max-width: 800px;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #FFFFFF;
+    letter-spacing: -0.02em;
+}
+
+.hero-description {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #FFFFFF;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+.continue-btn {
+    background: transparent;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    padding: 0.875rem 3rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.continue-btn:hover {
+    background-color: #1A1A1A;
+    transform: translateY(-2px);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(4px);
+}
+
+.modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: #1A1A1A;
+    padding: 2.5rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+    border: 1px solid #2A2A2A;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.close-btn:hover {
+    opacity: 0.7;
+}
+
+.modal-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.auth-input {
+    background-color: #0A0A0A;
+    border: 1px solid #2A2A2A;
+    color: #FFFFFF;
+    padding: 0.875rem;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease;
+}
+
+.auth-input:focus {
+    outline: none;
+    border-color: #FFFFFF;
+}
+
+.auth-input::placeholder {
+    color: #666666;
+}
+
+.auth-submit {
+    background-color: #FFFFFF;
+    color: #000000;
+    border: none;
+    padding: 0.875rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+.auth-submit:hover {
+    background-color: #E0E0E0;
+}
+
+.auth-toggle {
+    text-align: center;
+    margin-top: 1rem;
+    color: #FFFFFF;
+    font-size: 0.9rem;
+}
+
+.auth-toggle a {
+    color: #FFFFFF;
+    text-decoration: underline;
+    margin-left: 0.25rem;
+}
+
+.auth-toggle a:hover {
+    opacity: 0.8;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        padding: 1rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .nav {
+        gap: 0.5rem;
+    }
+
+    .nav-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    }
